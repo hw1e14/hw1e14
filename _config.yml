@@ -68,6 +68,6 @@ theme: yilia
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: github
-  repository: https://github.com/hw1e14/blog_hexo
+  type: git
+  repository: https://github.com/hw1e14/hw1e14-hw1e14.github.io.git
   branch: master
