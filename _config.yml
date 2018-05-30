@@ -3,16 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
+title: 37℃白日梦
+subtitle: 码农不完全体，未知青年
+description: 我的心略大于整个宇宙。。
+author: Mr.llover
+email: mr.llover0327@gmail.com
+language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://hw1e14.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -63,7 +64,61 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: yilia
+theme: next
+
+#草稿预览
+render_drafts: true
+
+#多说账号
+duoshuo_shortname: mrllover
+
+#侧边栏头像
+avatar: /images/avatar.jpg
+
+# 社交链接，将在侧栏中显示
+social:
+  GitHub: https://github.com/hw1e14
+  # Twitter: your-twitter-url
+  Weibo: http://weibo.com/mrllover1991
+  # DouBan: your-douban-url
+  ZhiHu: http://www.zhihu.com/people/wu-hao-xiang-91
+
+#统计信息
+# google_analytics: your-analytics-id
+# baidu_analytics: your-analytics-id
+
+#RSS
+rss: 
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+
+#站内搜索
+swiftype_key: y7ztDsTNcLq86CRRuPji
+
+# JiaThis 分享服务
+jiathis: true
+
+#添加 Google Webmaster tools 验证
+google_site_verification: ERBMVYOZnaLrs0ZF75wkXZV-aQcTN5HCKbtikHz550Q
+
+#站点建立时间
+since: 2015
+
+# title, chinese available
+links_title: 推荐网站
+# links
+links:
+  MacTalk: http://macshuo.com/
+
+
+# 文章末尾是否显示打赏按钮
+donate: 
+  enable: true
+  text: Enjoy it ? Donate me !  欣赏此文？求鼓励，求支持！
+  alipay: /images/alipay.jpg
+  wechat: /images/wechat.jpg
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
