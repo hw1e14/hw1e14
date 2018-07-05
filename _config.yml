@@ -66,9 +66,6 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: next
 
-#草稿预览
-render_drafts: true
-
 #多说账号
 duoshuo_shortname: mrllover
 
