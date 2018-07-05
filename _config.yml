@@ -64,7 +64,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: jekyll-theme-minimal
+theme: next
 
 #多说账号
 duoshuo_shortname: mrllover
