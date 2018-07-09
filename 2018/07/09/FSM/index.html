@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python," />
 
 
 
@@ -98,16 +98,18 @@
 
 
 
-<meta name="description" content="我的心略大于整个宇宙。。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="37℃白日梦">
-<meta property="og:url" content="https://hw1e14.github.io/index.html">
+<meta name="description" content="以视频播放器为例：State List: play pause stop  Action List: toggle forward backward stop  State Change Table View(list all transtions from one state to another with actions to trigger):    play pause stop">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Transations 库实现有限状态机（Finite-state machine, FSM）">
+<meta property="og:url" content="https://hw1e14.github.io/2018/07/09/FSM/index.html">
 <meta property="og:site_name" content="37℃白日梦">
-<meta property="og:description" content="我的心略大于整个宇宙。。">
+<meta property="og:description" content="以视频播放器为例：State List: play pause stop  Action List: toggle forward backward stop  State Change Table View(list all transtions from one state to another with actions to trigger):    play pause stop">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-09T05:26:40.834Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="37℃白日梦">
-<meta name="twitter:description" content="我的心略大于整个宇宙。。">
+<meta name="twitter:title" content="Python Transations 库实现有限状态机（Finite-state machine, FSM）">
+<meta name="twitter:description" content="以视频播放器为例：State List: play pause stop  Action List: toggle forward backward stop  State Change Table View(list all transtions from one state to another with actions to trigger):    play pause stop">
 
 
 
@@ -136,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://hw1e14.github.io/"/>
+  <link rel="canonical" href="https://hw1e14.github.io/2018/07/09/FSM/"/>
 
 
 
 
 
-  <title>37℃白日梦</title>
+  <title>Python Transations 库实现有限状态机（Finite-state machine, FSM） | 37℃白日梦</title>
   
 
 
@@ -167,9 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -282,9 +282,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -314,9 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/09/FSM/" itemprop="url">Python Transations 库实现有限状态机（Finite-state machine, FSM）</a></h1>
+          <h1 class="post-title" itemprop="name headline">Python Transations 库实现有限状态机（Finite-state machine, FSM）</h1>
         
 
         <div class="post-meta">
@@ -376,9 +374,7 @@
       
 
       
-        
-          
-            <h1 id="以视频播放器为例："><a href="#以视频播放器为例：" class="headerlink" title="以视频播放器为例："></a>以视频播放器为例：</h1><h2 id="State-List"><a href="#State-List" class="headerlink" title="State List:"></a>State List:</h2><ul>
+        <h1 id="以视频播放器为例："><a href="#以视频播放器为例：" class="headerlink" title="以视频播放器为例："></a>以视频播放器为例：</h1><h2 id="State-List"><a href="#State-List" class="headerlink" title="State List:"></a>State List:</h2><ul>
 <li>play</li>
 <li>pause</li>
 <li>stop</li>
@@ -421,8 +417,6 @@
 </table>
 <h2 id="Sample-Code"><a href="#Sample-Code" class="headerlink" title="Sample Code:"></a>Sample Code:</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">from transitions import Machine</span><br><span class="line"></span><br><span class="line">class Player(object):</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line">model = Player()</span><br><span class="line"></span><br><span class="line">states = ['play', 'pause', '<span class="keyword">stop</span><span class="string">']</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">actions = ['</span>toggle<span class="string">', '</span>forward<span class="string">', '</span>backward<span class="string">', '</span><span class="keyword">stop</span><span class="string">']</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">transitions = [</span></span><br><span class="line"><span class="string">    &#123;'</span><span class="keyword">trigger</span><span class="string">': '</span>forward<span class="string">', '</span><span class="keyword">source</span><span class="string">': '</span>play<span class="string">', '</span>dest<span class="string">': '</span>play<span class="string">' &#125;,</span></span><br><span class="line"><span class="string">    &#123;'</span><span class="keyword">trigger</span><span class="string">': '</span>backward<span class="string">', '</span><span class="keyword">source</span><span class="string">': '</span>play<span class="string">', '</span>dest<span class="string">': '</span>play<span class="string">' &#125;,</span></span><br><span class="line"><span class="string">    &#123;'</span><span class="keyword">trigger</span><span class="string">': '</span>toggle<span class="string">', '</span><span class="keyword">source</span><span class="string">': '</span>play<span class="string">', '</span>dest<span class="string">': '</span>pause<span class="string">'&#125;,</span></span><br><span class="line"><span class="string">    &#123;'</span><span class="keyword">trigger</span><span class="string">': '</span><span class="keyword">stop</span><span class="string">', '</span><span class="keyword">source</span><span class="string">': '</span>play<span class="string">', '</span>dest<span class="string">': '</span><span class="keyword">stop</span><span class="string">'&#125;,</span></span><br><span class="line"><span class="string">    &#123;'</span><span class="keyword">trigger</span><span class="string">': '</span>toggle<span class="string">', '</span><span class="keyword">source</span><span class="string">': '</span>pause<span class="string">', '</span>dest<span class="string">': '</span>play<span class="string">'&#125;,</span></span><br><span class="line"><span class="string">    &#123;'</span><span class="keyword">trigger</span><span class="string">': '</span>forward<span class="string">', '</span><span class="keyword">source</span><span class="string">': '</span>pause<span class="string">', '</span>dest<span class="string">': '</span>pause<span class="string">'&#125;,</span></span><br><span class="line"><span class="string">    &#123;'</span><span class="keyword">trigger</span><span class="string">': '</span>backward<span class="string">', '</span><span class="keyword">source</span><span class="string">': '</span>pause<span class="string">', '</span>dest<span class="string">': '</span>pause<span class="string">'&#125;,</span></span><br><span class="line"><span class="string">    &#123;'</span><span class="keyword">trigger</span><span class="string">': '</span><span class="keyword">stop</span><span class="string">', '</span><span class="keyword">source</span><span class="string">': '</span>pause<span class="string">', '</span>dest<span class="string">': '</span><span class="keyword">stop</span><span class="string">'&#125;,</span></span><br><span class="line"><span class="string">    &#123;'</span><span class="keyword">trigger</span><span class="string">': '</span>toggle<span class="string">', '</span><span class="keyword">source</span><span class="string">': '</span><span class="keyword">stop</span><span class="string">', '</span>dest<span class="string">': '</span>play<span class="string">'&#125;]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">machine = Machine(model=model, states=states, transitions=transitions, initial='</span>pause<span class="string">')</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># Test</span></span><br><span class="line"><span class="string">print(model.state)    # pause</span></span><br><span class="line"><span class="string">model.toggle()</span></span><br><span class="line"><span class="string">print(model.state)  #play</span></span><br><span class="line"><span class="string">model.stop()</span></span><br><span class="line"><span class="string">print(model.state)  #stop</span></span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -437,434 +431,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hw1e14.github.io/2015/10/31/UoS-vpn/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.llover">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="37℃白日梦">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/10/31/UoS-vpn/" itemprop="url">如何使用Soton账号进行vpn翻墙</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-31T23:45:18+08:00">
-                2015-10-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/python/" rel="tag"># python</a>
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2015/10/31/UoS-vpn/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/31/UoS-vpn/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <blockquote>
-<p>使用Soton账号进行vpn翻墙, Mac OS, iPhone以及iPad亲测可用。</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/10/31/UoS-vpn/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/31/UoS-vpn/" rel="next" title="如何使用Soton账号进行vpn翻墙">
+                <i class="fa fa-chevron-left"></i> 如何使用Soton账号进行vpn翻墙
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hw1e14.github.io/2015/10/31/随便发发/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.llover">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="37℃白日梦">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/10/31/随便发发/" itemprop="url">随便发发</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-31T16:55:33+08:00">
-                2015-10-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2015/10/31/随便发发/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/31/随便发发/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<h1 id="顾名思义-这些都是一些无聊的网站👀"><a href="#顾名思义-这些都是一些无聊的网站👀" class="headerlink" title="顾名思义,这些都是一些无聊的网站👀"></a>顾名思义,这些都是一些无聊的网站👀</h1></blockquote>
-<hr>
-<h2 id="这是入口："><a href="#这是入口：" class="headerlink" title="这是入口："></a>这是入口：</h2><blockquote>
-<p><a href="http://www.theuselessweb.com/" target="_blank" rel="noopener">无用的网站大汇总</a></p>
-</blockquote>
-<hr>
-<h2 id="这是例子："><a href="#这是例子：" class="headerlink" title="这是例子："></a>这是例子：</h2><ol>
-<li><a href="http://www.papertoilet.com/" target="_blank" rel="noopener">给，你的纸巾</a></li>
-<li><a href="http://www.muchbetterthanthis.com/" target="_blank" rel="noopener">接吻😘</a></li>
-<li><a href="http://www.omfgdogs.com/" target="_blank" rel="noopener">奔跑吧，汪星人🐶</a></li>
-<li><a href="http://www.koalastothemax.com/" target="_blank" rel="noopener">分裂的○</a></li>
-<li><a href="http://www.taghua.com/" target="_blank" rel="noopener">分叉的🌸🌲</a></li>
-<li><a href="http://www.haneke.net/" target="_blank" rel="noopener">有趣的流程图</a></li>
-<li><a href="http://www.sadforjapan.com/" target="_blank" rel="noopener">晃动的水滴💧</a></li>
-<li><a href="http://iloveyoulikeafatladylovesapples.com/" target="_blank" rel="noopener">老奶奶扔🍎</a></li>
-<li><a href="http://www.staggeringbeauty.com/" target="_blank" rel="noopener">好像有奇怪的东西混进来了</a></li>
-</ol>
-<hr>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hw1e14.github.io/2015/10/28/Ruby on Rails中nokogiri问题的解决方案/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mr.llover">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="37℃白日梦">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2015/10/28/Ruby on Rails中nokogiri问题的解决方案/" itemprop="url">Ruby on Rails中nokogiri问题的解决方案</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-28T16:45:40+08:00">
-                2015-10-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2015/10/28/Ruby on Rails中nokogiri问题的解决方案/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/28/Ruby on Rails中nokogiri问题的解决方案/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>本文旨在解决rails server时报错的问题。</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2015/10/28/Ruby on Rails中nokogiri问题的解决方案/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -874,10 +470,34 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -885,6 +505,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2018/07/09/FSM/"
+           data-title="Python Transations 库实现有限状态机（Finite-state machine, FSM）" data-url="https://hw1e14.github.io/2018/07/09/FSM/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -905,8 +533,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -1015,6 +652,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#以视频播放器为例："><span class="nav-number">1.</span> <span class="nav-text">以视频播放器为例：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#State-List"><span class="nav-number">1.1.</span> <span class="nav-text">State List:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Action-List"><span class="nav-number">1.2.</span> <span class="nav-text">Action List:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#State-Change-Table-View-list-all-transtions-from-one-state-to-another-with-actions-to-trigger"><span class="nav-number">1.3.</span> <span class="nav-text">State Change Table View(list all transtions from one state to another with actions to trigger):</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-Code"><span class="nav-number">1.4.</span> <span class="nav-text">Sample Code:</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1128,10 +781,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
