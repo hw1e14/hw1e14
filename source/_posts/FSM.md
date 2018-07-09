@@ -27,7 +27,7 @@ date: 2018-07-09 13:26:40
 
 
 ## Sample Code:
-```
+```python
 from transitions import Machine
 
 class Player(object):
