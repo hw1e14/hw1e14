@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="ERBMVYOZnaLrs0ZF75wkXZV-aQcTN5HCKbtikHz550Q" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="js,frontend," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="37℃白日梦" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="本文旨在手机好用又好看的js插件以备不时之需">
+<meta name="keywords" content="js,frontend">
+<meta property="og:type" content="article">
+<meta property="og:title" content="风格极佳的JavaScript插件">
+<meta property="og:url" content="https://hw1e14.github.io/2015/10/28/likes/index.html">
+<meta property="og:site_name" content="37℃白日梦">
+<meta property="og:description" content="本文旨在手机好用又好看的js插件以备不时之需">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://7xny9b.com1.z0.glb.clouddn.com/wechat.jpg">
+<meta property="og:updated_time" content="2018-07-08T07:24:45.788Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="风格极佳的JavaScript插件">
+<meta name="twitter:description" content="本文旨在手机好用又好看的js插件以备不时之需">
+<meta name="twitter:image" content="http://7xny9b.com1.z0.glb.clouddn.com/wechat.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://hw1e14.github.io/2015/10/28/likes/"/>
+
+
+
+
+
+  <title>风格极佳的JavaScript插件 | 37℃白日梦</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">37℃白日梦</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">码农不完全体，未知青年</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'y7ztDsTNcLq86CRRuPji','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://hw1e14.github.io/2015/10/28/likes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr.llover">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="37℃白日梦">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">风格极佳的JavaScript插件</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-28T16:45:40+08:00">
+                2015-10-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2015/10/28/likes/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/28/likes/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>本文旨在手机好用又好看的js插件以备不时之需</p>
+</blockquote>
+<a id="more"></a> 
+<h1 id="Dynamics-js"><a href="#Dynamics-js" class="headerlink" title="Dynamics.js"></a><a href="http://dynamicsjs.com/" target="_blank" rel="noopener">Dynamics.js</a></h1><blockquote>
+<p>Javascript 动画库</p>
+</blockquote>
+<h1 id="Wee"><a href="#Wee" class="headerlink" title="Wee"></a><a href="https://www.weepower.com/" target="_blank" rel="noopener">Wee</a></h1><blockquote>
+<p>minimal front-end framework</p>
+</blockquote>
+<h1 id="balance-text"><a href="#balance-text" class="headerlink" title="balance-text"></a><a href="A jQuery plugin for implementing balancing of wrapping text in a web page">balance-text</a></h1><blockquote>
+<p>A jQuery plugin for implementing balancing of wrapping text in a web page</p>
+</blockquote>
+<h1 id="Trial-js"><a href="#Trial-js" class="headerlink" title="Trial.js"></a><a href="http://markocen.github.io/trialjs/trial-js.html" target="_blank" rel="noopener">Trial.js</a></h1><blockquote>
+<p>Simple library could monitor mouse position and predict user input</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">可用于预判加载内容，好用。</span><br></pre></td></tr></table></figure>
+<h1 id="in-view-js"><a href="#in-view-js" class="headerlink" title="in-view.js"></a><a href="https://camwiegert.github.io/in-view/" target="_blank" rel="noopener">in-view.js</a></h1><blockquote>
+<p>Get notified when a DOM element enters or exits the viewport.</p>
+</blockquote>
+<h1 id="Fresco"><a href="#Fresco" class="headerlink" title="Fresco"></a><a href="http://www.frescojs.com/" target="_blank" rel="noopener">Fresco</a></h1><blockquote>
+<p>Fresco is a beautiful responsive lightbox. 简洁好用的照片slider.</p>
+</blockquote>
+<h1 id="Slyder"><a href="#Slyder" class="headerlink" title="Slyder"></a><a href="https://cdn.rawgit.com/crewstyle/slyder/f72b904969e18a2ea0454330578d0012239b581d/demo/index.html" target="_blank" rel="noopener">Slyder</a></h1><blockquote>
+<p>a responsive slider navigation faq jQuery plugin. 极好用的父子级间内容跳转控件。</p>
+</blockquote>
+<h1 id="formToWizard"><a href="#formToWizard" class="headerlink" title="formToWizard"></a><a href="https://jsfiddle.net/artoodetoo/r67b1jkb/embedded/result/" target="_blank" rel="noopener">formToWizard</a></h1><blockquote>
+<p>流程form提交。</p>
+</blockquote>
+<h1 id="Bootstrap-Calendar"><a href="#Bootstrap-Calendar" class="headerlink" title="Bootstrap Calendar"></a><a href="http://bootstrap-calendar.azurewebsites.net/index-bs3.html" target="_blank" rel="noopener">Bootstrap Calendar</a></h1><blockquote>
+<p>Bootstrap based full view calendar. Template based.</p>
+</blockquote>
+<h1 id="Grade-js"><a href="#Grade-js" class="headerlink" title="Grade.js"></a><a href="http://benhowdle.im/grade/" target="_blank" rel="noopener">Grade.js</a></h1><blockquote>
+<p>添加照片主色框。</p>
+</blockquote>
+<h1 id="Tree-Multiselect"><a href="#Tree-Multiselect" class="headerlink" title="Tree Multiselect"></a><a href="https://github.com/patosai/tree-multiselect.js" target="_blank" rel="noopener">Tree Multiselect</a></h1><h1 id="TableEdit"><a href="#TableEdit" class="headerlink" title="TableEdit"></a><a href="http://markcell.github.io/jquery-tabledit/#examples" target="_blank" rel="noopener">TableEdit</a></h1><blockquote>
+<p>Inline editor for HTML tables compatible with Bootstrap.</p>
+</blockquote>
+<h1 id="News-Ticker"><a href="#News-Ticker" class="headerlink" title="News Ticker"></a><a href="http://jquery-plugins.net/demo/responsive-jquery-news-ticker-plugin-with-bootstrap.html" target="_blank" rel="noopener">News Ticker</a></h1><blockquote>
+<p>可用作动态显示评论内容。 </p>
+</blockquote>
+<h1 id="Bootbox-js"><a href="#Bootbox-js" class="headerlink" title="Bootbox.js"></a><a href="http://bootboxjs.com/#" target="_blank" rel="noopener">Bootbox.js</a></h1><blockquote>
+<p>Bootstrap modals made easy.</p>
+</blockquote>
+<h1 id="Text-Mask"><a href="#Text-Mask" class="headerlink" title="Text Mask"></a><a href="https://text-mask.github.io/text-mask/" target="_blank" rel="noopener">Text Mask</a></h1><blockquote>
+<p>验证并只能输入规定的字符。</p>
+</blockquote>
+<h1 id="EventCalendar"><a href="#EventCalendar" class="headerlink" title="EventCalendar"></a><a href="https://github.com/philipehsing/jQuery.Simple-Event-Calendar" target="_blank" rel="noopener">EventCalendar</a></h1><blockquote>
+<p>简单的event calendar.</p>
+</blockquote>
+<h1 id="MarkerPen"><a href="#MarkerPen" class="headerlink" title="MarkerPen"></a><a href="http://www.ajarunthomas.com/jquery/markerPen/demo/" target="_blank" rel="noopener">MarkerPen</a></h1><blockquote>
+<p>简单的马克笔工具。</p>
+</blockquote>
+<h1 id="marginotes"><a href="#marginotes" class="headerlink" title="marginotes"></a><a href="https://github.com/fdansv/marginotes" target="_blank" rel="noopener">marginotes</a></h1><blockquote>
+<p>极简批注.</p>
+</blockquote>
+<h1 id="push-js"><a href="#push-js" class="headerlink" title="push.js"></a><a href="http://nickersoft.github.io/push.js/" target="_blank" rel="noopener">push.js</a></h1><blockquote>
+<p>Cross Browser Javascript Desktop Notifications.</p>
+</blockquote>
+<h1 id="Bideo-js"><a href="#Bideo-js" class="headerlink" title="Bideo.js"></a><a href="https://rishabhp.github.io/bideo.js/" target="_blank" rel="noopener">Bideo.js</a></h1><blockquote>
+<p>A JS library that makes it super easy to add fullscreen background videos.<br>(Hold on! The video might take a while to load.)</p>
+</blockquote>
+<h1 id="Plyr"><a href="#Plyr" class="headerlink" title="Plyr"></a><a href="https://plyr.io/" target="_blank" rel="noopener">Plyr</a></h1><blockquote>
+<p>Plyr is a simple, accessible and customizable HTML5, YouTube and Vimeo media player.</p>
+</blockquote>
+<h1 id="Kajero"><a href="#Kajero" class="headerlink" title="Kajero"></a><a href="http://www.joelotter.com/kajero/" target="_blank" rel="noopener">Kajero</a></h1><blockquote>
+<p>极好的在线编辑工具。</p>
+</blockquote>
+<h1 id="Jodit-Editer"><a href="#Jodit-Editer" class="headerlink" title="Jodit Editer"></a><a href="http://xdsoft.net/jodit/" target="_blank" rel="noopener">Jodit Editer</a></h1><blockquote>
+<p>嵌入式富文本编辑器。</p>
+</blockquote>
+<h1 id="Smooth-Scrollbar"><a href="#Smooth-Scrollbar" class="headerlink" title="Smooth Scrollbar"></a><a href="http://idiotwu.github.io/smooth-scrollbar/" target="_blank" rel="noopener">Smooth Scrollbar</a></h1><blockquote>
+<p>能很好得实现滚动速度等的控制。</p>
+</blockquote>
+<h1 id="Random-Quote-Machine"><a href="#Random-Quote-Machine" class="headerlink" title="Random Quote Machine"></a><a href="http://codepen.io/gaoey/full/BKMRpB/" target="_blank" rel="noopener">Random Quote Machine</a></h1><blockquote>
+<p>A simple and nice random quote machine created by using jQuery and JSON.</p>
+</blockquote>
+<h1 id="SweetAlert-js"><a href="#SweetAlert-js" class="headerlink" title="SweetAlert.js"></a><a href="http://t4t5.github.io/sweetalert/" target="_blank" rel="noopener">SweetAlert.js</a></h1><blockquote>
+<p>A BEAUTIFUL REPLACEMENT FOR JAVASCRIPT’S “ALERT”</p>
+</blockquote>
+<h1 id="Skippr"><a href="#Skippr" class="headerlink" title="Skippr"></a><a href="http://austenpayan.github.io/skippr/" target="_blank" rel="noopener">Skippr</a></h1><blockquote>
+<p>A lighter, faster slideshow plugin for jQuery.</p>
+</blockquote>
+<h1 id="Prezento"><a href="#Prezento" class="headerlink" title="Prezento"></a><a href="http://ivaldi.github.io/prezento/" target="_blank" rel="noopener">Prezento</a></h1><blockquote>
+<p>Prezento, a jQuery plugin to showcase your web designs.</p>
+</blockquote>
+<h1 id="Slideme-js"><a href="#Slideme-js" class="headerlink" title="Slideme.js"></a><a href="http://slideme.luigiferraresi.it/" target="_blank" rel="noopener">Slideme.js</a></h1><blockquote>
+<p>A powerful jquery slideshow.</p>
+</blockquote>
+<h1 id="conveyor"><a href="#conveyor" class="headerlink" title="conveyor"></a><a href="http://bite-software.co.uk/conveyor/" target="_blank" rel="noopener">conveyor</a></h1><blockquote>
+<p>Another jQuery slideshow/carousel plugin -&gt; rollin’ out your content on the factory line ..</p>
+</blockquote>
+<h1 id="http-jaysalvat-com"><a href="#http-jaysalvat-com" class="headerlink" title="http://jaysalvat.com/"></a><a href="http://jaysalvat.com/" target="_blank" rel="noopener">http://jaysalvat.com/</a></h1><blockquote>
+<p>A stunning website.</p>
+</blockquote>
+<h1 id="textillate-js"><a href="#textillate-js" class="headerlink" title="textillate.js"></a><a href="http://textillate.js.org/" target="_blank" rel="noopener">textillate.js</a></h1><blockquote>
+<p>CSS3 animations to any text.</p>
+</blockquote>
+<h1 id="waves-js"><a href="#waves-js" class="headerlink" title="waves.js"></a><a href="http://www.yyyweb.com/demo/waves/index.html#" target="_blank" rel="noopener">waves.js</a></h1><blockquote>
+<p>实现点击波浪效果</p>
+</blockquote>
+<h1 id="极酷炫的图片切换效果"><a href="#极酷炫的图片切换效果" class="headerlink" title="极酷炫的图片切换效果"></a><a href="http://www.yyyweb.com/demo/four-boxes/index3.html" target="_blank" rel="noopener">极酷炫的图片切换效果</a></h1><h1 id="Bounce-js"><a href="#Bounce-js" class="headerlink" title="Bounce.js"></a><a href="http://bouncejs.com/" target="_blank" rel="noopener">Bounce.js</a></h1><blockquote>
+<p>Bounce.js is a tool and JS library that lets you create beautiful CSS3 powered animations. </p>
+</blockquote>
+<h1 id="strip-js"><a href="#strip-js" class="headerlink" title="strip.js"></a><a href="http://www.stripjs.com/" target="_blank" rel="noopener">strip.js</a></h1><blockquote>
+<p>A Less Intrusive Responsive Lightbox</p>
+</blockquote>
+<h1 id="好看的载入动态效果"><a href="#好看的载入动态效果" class="headerlink" title="好看的载入动态效果"></a><a href="http://www.yyyweb.com/demo/single-loaders/#load1" target="_blank" rel="noopener">好看的载入动态效果</a></h1><h1 id="页面加载特效"><a href="#页面加载特效" class="headerlink" title="页面加载特效"></a><a href="http://www.yyyweb.com/demo/page-loading-effects/index2.html" target="_blank" rel="noopener">页面加载特效</a></h1><h1 id="sequence-js"><a href="#sequence-js" class="headerlink" title="sequence.js"></a><a href="http://www.sequencejs.com/" target="_blank" rel="noopener">sequence.js</a></h1><blockquote>
+<p>For creating sliders, presentations, banners, and other step-based applications</p>
+</blockquote>
+<h1 id="lazyline-painter"><a href="#lazyline-painter" class="headerlink" title="lazyline-painter"></a><a href="http://lazylinepainter.info/" target="_blank" rel="noopener">lazyline-painter</a></h1><blockquote>
+<p>an interesting JQuery SVG line painter.</p>
+</blockquote>
+<h1 id="Swiper"><a href="#Swiper" class="headerlink" title="Swiper"></a><a href="http://idangero.us/swiper/#.V8RswaN946Q" target="_blank" rel="noopener">Swiper</a></h1><blockquote>
+<p>Mobile-based touch slider</p>
+</blockquote>
+<h1 id="countdown-jquery"><a href="#countdown-jquery" class="headerlink" title="countdown-jquery"></a><a href="http://demo.tutorialzine.com/2011/12/countdown-jquery/" target="_blank" rel="noopener">countdown-jquery</a></h1><h1 id="photowall"><a href="#photowall" class="headerlink" title="photowall"></a><a href="http://tympanus.net/Tutorials/ImageWall/" target="_blank" rel="noopener">photowall</a></h1><hr>
+<blockquote>
+<p>如果觉得本文对您有帮助，不妨扫一扫下面的二维码给点打赏呗😌</p>
+</blockquote>
+<p><img src="http://7xny9b.com1.z0.glb.clouddn.com/wechat.jpg" alt=""></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+            <a href="/tags/frontend/" rel="tag"># frontend</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/28/Ruby on Rails中nokogiri问题的解决方案/" rel="next" title="Ruby on Rails中nokogiri问题的解决方案">
+                <i class="fa fa-chevron-left"></i> Ruby on Rails中nokogiri问题的解决方案
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/10/31/随便发发/" rel="prev" title="随便发发">
+                随便发发 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/10/28/likes/"
+           data-title="风格极佳的JavaScript插件" data-url="https://hw1e14.github.io/2015/10/28/likes/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Mr.llover" />
+          <p class="site-author-name" itemprop="name">Mr.llover</p>
+           
+              <p class="site-description motion-element" itemprop="description">我的心略大于整个宇宙。。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/hw1e14" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/mrllover1991" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/wu-hao-xiang-91" target="_blank" title="ZhiHu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      ZhiHu
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              推荐网站
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Dynamics-js"><span class="nav-number">1.</span> <span class="nav-text">Dynamics.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Wee"><span class="nav-number">2.</span> <span class="nav-text">Wee</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#balance-text"><span class="nav-number">3.</span> <span class="nav-text">balance-text</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Trial-js"><span class="nav-number">4.</span> <span class="nav-text">Trial.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#in-view-js"><span class="nav-number">5.</span> <span class="nav-text">in-view.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fresco"><span class="nav-number">6.</span> <span class="nav-text">Fresco</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Slyder"><span class="nav-number">7.</span> <span class="nav-text">Slyder</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#formToWizard"><span class="nav-number">8.</span> <span class="nav-text">formToWizard</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bootstrap-Calendar"><span class="nav-number">9.</span> <span class="nav-text">Bootstrap Calendar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Grade-js"><span class="nav-number">10.</span> <span class="nav-text">Grade.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tree-Multiselect"><span class="nav-number">11.</span> <span class="nav-text">Tree Multiselect</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TableEdit"><span class="nav-number">12.</span> <span class="nav-text">TableEdit</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#News-Ticker"><span class="nav-number">13.</span> <span class="nav-text">News Ticker</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bootbox-js"><span class="nav-number">14.</span> <span class="nav-text">Bootbox.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Text-Mask"><span class="nav-number">15.</span> <span class="nav-text">Text Mask</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#EventCalendar"><span class="nav-number">16.</span> <span class="nav-text">EventCalendar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MarkerPen"><span class="nav-number">17.</span> <span class="nav-text">MarkerPen</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#marginotes"><span class="nav-number">18.</span> <span class="nav-text">marginotes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#push-js"><span class="nav-number">19.</span> <span class="nav-text">push.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bideo-js"><span class="nav-number">20.</span> <span class="nav-text">Bideo.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Plyr"><span class="nav-number">21.</span> <span class="nav-text">Plyr</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Kajero"><span class="nav-number">22.</span> <span class="nav-text">Kajero</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Jodit-Editer"><span class="nav-number">23.</span> <span class="nav-text">Jodit Editer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Smooth-Scrollbar"><span class="nav-number">24.</span> <span class="nav-text">Smooth Scrollbar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Random-Quote-Machine"><span class="nav-number">25.</span> <span class="nav-text">Random Quote Machine</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SweetAlert-js"><span class="nav-number">26.</span> <span class="nav-text">SweetAlert.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Skippr"><span class="nav-number">27.</span> <span class="nav-text">Skippr</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Prezento"><span class="nav-number">28.</span> <span class="nav-text">Prezento</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Slideme-js"><span class="nav-number">29.</span> <span class="nav-text">Slideme.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#conveyor"><span class="nav-number">30.</span> <span class="nav-text">conveyor</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#http-jaysalvat-com"><span class="nav-number">31.</span> <span class="nav-text">http://jaysalvat.com/</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#textillate-js"><span class="nav-number">32.</span> <span class="nav-text">textillate.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#waves-js"><span class="nav-number">33.</span> <span class="nav-text">waves.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#极酷炫的图片切换效果"><span class="nav-number">34.</span> <span class="nav-text">极酷炫的图片切换效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bounce-js"><span class="nav-number">35.</span> <span class="nav-text">Bounce.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#strip-js"><span class="nav-number">36.</span> <span class="nav-text">strip.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#好看的载入动态效果"><span class="nav-number">37.</span> <span class="nav-text">好看的载入动态效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#页面加载特效"><span class="nav-number">38.</span> <span class="nav-text">页面加载特效</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sequence-js"><span class="nav-number">39.</span> <span class="nav-text">sequence.js</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lazyline-painter"><span class="nav-number">40.</span> <span class="nav-text">lazyline-painter</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Swiper"><span class="nav-number">41.</span> <span class="nav-text">Swiper</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#countdown-jquery"><span class="nav-number">42.</span> <span class="nav-text">countdown-jquery</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#photowall"><span class="nav-number">43.</span> <span class="nav-text">photowall</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.llover</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mrllover"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
