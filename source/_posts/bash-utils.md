@@ -34,6 +34,15 @@ tags:
   ```
   cat jmtdata_AllSites_2018-07-06.csv |awk '{if($1=="303790" && $9=="2018-07-06") print $1,$9}'|wc -l
   ```
+- send email
+  ```
+  echo -e "All CSV files are generated successfully \n Date: $2 $(date "+%H:%M:%S") \n Thanks, \n Test"| mail -s "Success" test@gmail.com
+  ```
+- sql insert
+  ```
+  echo -e "UPSERT INTO SAP_DATATELEMETRY VALUES('${rowKey}','${datatype}','0','${jobEndTIME}','0','${dataEntry}','$4');" > insert_jmt_telemetry.sql
+  /opt/cloudera/parcels/APACHE_PHOENIX/lib/phoenix/bin/psql.py sap-zookeeper1-gsb:2181 insert_jmt_telemetry.sql
+  ```
 
 # Loop Func:
 ```shell
