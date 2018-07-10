@@ -1,8 +1,6 @@
 title: 如何使用Soton账号进行vpn翻墙
 tags:
   - vpn
-  - soton
-  - 翻墙
 date: 2015-10-31 23:45:18
 ---
 

@@ -4,8 +4,8 @@ date: 2015-10-28 16:45:40
 
 tags: 
 
-- Ruby
-- RoR
+- ruby
+- debug
 
 ---
 > 本文旨在解决rails server时报错的问题。
